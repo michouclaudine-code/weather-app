@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -34,17 +35,20 @@
             </div>
           </form>
         </div>
-        <div class="location">Location here</div>
       </div>
       <div class="mid">
-        <div class="city">City</div>
-        <div class="temp">Temp here</div>
+        <div class="city">
+          <h1>Alkmaar</h1>
+        </div>
+        <div class="temp">
+          <h2>17°C/°F</h2>
+          <ul>
+            <li>Precipitation: 91%</li>
+            <li>Humidity: 77%</li>
+            <li>Wind: 10 km/h</li>
+          </ul>
+        </div>
       </div>
-      <div class="bottom">
-        <div class="forecast">forecast here</div>
-      </div>
-    </div>
-
     <script src="src/index.js"></script>
   </body>
 </html>
