@@ -2,9 +2,17 @@ let apiKey = "c819171fe0abdc14039af4ef5dda283b";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 function showTemperature(response) {
-  let temperatureElement = document.querySelector(".temp h2");
+  let temperatureElement = document.querySelector(".temperature");
   let temp = Math.round(response.data.main.temp);
-  temperatureElement.innerHTML = `${temp} °C/°F`;
+  temperatureElement.innerHTML = `${temp}`;
+
+  let humidityElement = document.querySelector("#humidity");
+  let humidity = Math.round(response.data.main.humidity);
+  humidityElement.innerHTML = `Humidity: ${humidity}%`;
+
+  let windElement = document.querySelector("#wind");
+  let wind = Math.round(response.data.wind.speed);
+  windElement.innerHTML = `Wind: ${wind} km/h`;
 }
 
 function search(event) {
