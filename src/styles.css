@@ -28,6 +28,11 @@ ul {
   box-shadow: 12px 12px 2px 1px rgba(80, 89, 128, 0.2);
 }
 
+.footnote {
+  margin-left: 35.5%;
+  font-size: 12px;
+}
+
 button {
   padding: 0;
   border: none;
