@@ -4,6 +4,21 @@ body {
   background-color: #b0c6d7;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   background-color: white;
   margin-top: 150px;

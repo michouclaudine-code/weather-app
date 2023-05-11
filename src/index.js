@@ -13,6 +13,10 @@ function showTemperature(response) {
   let windElement = document.querySelector(".wind");
   let wind = Math.round(response.data.wind.speed);
   windElement.innerHTML = `Wind: ${wind} km/h`;
+
+  let weatherElement = document.querySelector(".weatherDescription");
+  let weather = response.data.weather[0].description;
+  weatherElement.innerHTML = `${weather}`;
 }
 
 function search(event) {
