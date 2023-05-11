@@ -1,6 +1,31 @@
 let apiKey = "c819171fe0abdc14039af4ef5dda283b";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
+function formatDate(timestamp) {
+  // calculate the date
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  return ` ${day} ${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
   let temperatureElement = document.querySelector(".currentTemp");
   let temp = Math.round(response.data.main.temp);
@@ -17,6 +42,9 @@ function showTemperature(response) {
   let weatherElement = document.querySelector(".weatherDescription");
   let weather = response.data.weather[0].description;
   weatherElement.innerHTML = `${weather}`;
+
+  let dateElement = document.querySelector(".date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function search(event) {
