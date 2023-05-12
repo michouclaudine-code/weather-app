@@ -54,6 +54,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", `${weather}`);
 
   celciusTemperature = Math.round(response.data.main.temp);
+  displayForecast();
 }
 
 function search(event) {
@@ -98,3 +99,25 @@ fahrenheitlink.addEventListener("click", displayFahrenheit);
 
 let celciuslink = document.querySelector("#celcius");
 celciuslink.addEventListener("click", displayCelcius);
+
+function displayForecast() {
+  let forecastElement = document.querySelector(".forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+            <strong>${day}</strong><br />
+            <img
+              class="weather"
+              src="http://openweathermap.org/img/wn/04d@2x.png"
+              width="40px"
+            /><br />
+            <div class="forecast-temp"><strong>7°</strong> / 1°</div>
+            <br />
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
