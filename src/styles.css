@@ -55,10 +55,7 @@ button {
 a {
   color: black;
   text-decoration: none;
-}
-
-a:hover {
-  color: orange;
+  cursor: default;
 }
 
 .forecast {
@@ -68,4 +65,9 @@ a:hover {
 img.weather {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.temperature .active {
+  color: orange;
+  cursor: default;
 }
