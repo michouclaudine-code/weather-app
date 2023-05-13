@@ -33,7 +33,6 @@ ul {
 }
 
 .footnote {
-  margin-left: 35.5%;
   font-size: 12px;
 }
 
@@ -48,8 +47,9 @@ button {
 }
 
 .currentTemp {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
+  margin-right: 20px;
 }
 
 a {
@@ -68,6 +68,25 @@ img.weather {
 }
 
 .temperature .active {
-  color: orange;
+  color: rgba(80, 89, 128, 0.2);
   cursor: default;
+}
+
+.updatedAt {
+  font-style: italic;
+  font-size: 12px;
+}
+
+#github {
+  text-decoration: underline;
+  color: #b0c6d7;
+  cursor: pointer;
+}
+
+.col {
+  text-align: center;
+}
+
+.forecast-temp {
+  font-size: 12px;
 }
