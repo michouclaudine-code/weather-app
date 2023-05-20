@@ -26,7 +26,7 @@ ul {
 .container {
   background-color: white;
   margin-top: 150px;
-  width: 30%;
+  width: 40%;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(80, 89, 128, 0.2);
@@ -67,11 +67,6 @@ img.weather {
   margin-bottom: 20px;
 }
 
-.temperature .active {
-  color: rgba(80, 89, 128, 0.2);
-  cursor: default;
-}
-
 .updatedAt {
   font-style: italic;
   font-size: 12px;
@@ -89,4 +84,9 @@ img.weather {
 
 .forecast-temp {
   font-size: 12px;
+}
+
+.active {
+  color: rgba(80, 89, 128, 0.2);
+  cursor: default;
 }

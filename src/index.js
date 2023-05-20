@@ -53,6 +53,9 @@ function showTemperature(response) {
   celciusTemperature = Math.round(response.data.main.temp);
 
   getForecast(response.data.coord);
+
+  fahrenheitlink.classList.remove("active");
+  celciuslink.classList.add("active");
 }
 
 function search(event) {
@@ -82,8 +85,8 @@ function displayFahrenheit(event) {
   let temperatureElement = document.querySelector(".currentTemp");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 
-  celciuslink.classList.remove("active");
   fahrenheitlink.classList.add("active");
+  celciuslink.classList.remove("active");
 }
 
 function displayCelcius(event) {
@@ -91,8 +94,8 @@ function displayCelcius(event) {
   let temperatureElement = document.querySelector(".currentTemp");
   temperatureElement.innerHTML = celciusTemperature;
 
-  fahrenheitlink.classList.remove("active");
   celciuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
 }
 
 let fahrenheitlink = document.querySelector("#fahrenheit");
